@@ -1,9 +1,11 @@
 package com.algaworks.algadelivery.delivery.tracking.domain.model;
 
 import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
+@NoArgsConstructor
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Item {
 
@@ -11,4 +13,14 @@ public class Item {
     private UUID id;
     private String name;
     private Integer quantity;
+
+
+    //Factory para instaciar um novo item
+    static Item brandNew(String name, Integer quantity){
+        Item item = new Item();
+        item.id = UUID.randomUUID();
+        item.name = name;
+        item.quantity = quantity;
+        return item;
+    }
 }
