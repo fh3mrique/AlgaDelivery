@@ -30,7 +30,7 @@ class DeliveryTest {
         assertThrows(DomainException.class, () ->{
             delivery.place();
         });
-        
+
         assertEquals(DeliveryStatus.DRAFT, delivery.getStatus());
         assertNull(delivery.getPlacedAt());
     }
