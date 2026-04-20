@@ -35,7 +35,7 @@ class DeliveryRepositoryTest {
         Delivery persistedDelivery = deliveryRepository.findById(delivery.getId()).orElseThrow();
 
         assertEquals(2, persistedDelivery.getItems().size());
-        
+
 
     }
     private Delivery.PreparationDetails createValidPrepationDetails() {
